@@ -1,6 +1,6 @@
 #pragma once
 
-#include "toml.hpp"
+#include <toml.hpp>
 #include "value.h"
 
 namespace ConfigCpp {
