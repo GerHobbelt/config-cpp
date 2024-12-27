@@ -22,6 +22,7 @@ ConfigCpp uses the following precedence order.  Each item takes precedence over 
 - default
 
 ## Dependencies
+
 - C++14-capable compiler
 - GoogleTest (unit testing)
 - CMake
@@ -85,6 +86,7 @@ config.AddStringOption("s,top-string","String option");
 config.AddDoubleOption("d,top-double","Double option");
 config.AddStringOption("long-only","String option w/no short name");
 ```
+
 By default a `--help` option is added, which will result in displaying the help output from `cxxopts` and then exiting with return code 1.  Errors encountered while parsing command-line arguments will result displaying the error message and help output from `cxxopts` and then exiting with return code 1.
 
 
@@ -98,7 +100,9 @@ double doubleVal = config.GetDouble("key.double");
 ```
 
 ### Unmarshalling to native types
+
 See the JSON, YAML and TOML libraries for requirements.
+
 ```c++
 JsonType myJsonConfig;
 if (config.UnmarshalJson<JsonType>(myJsonConfig)) {
